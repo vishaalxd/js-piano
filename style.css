@@ -1,0 +1,51 @@
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.sharps, .keys {
+    display: flex;
+    flex-direction: row;
+    padding :20px;
+}
+
+.val{
+    text-align: center;
+    width: 100px;
+    margin-left: 8px;
+    margin-right: 8px;
+    padding: 20px;
+    /* height: 80px; */
+    background: plum;
+    font-size: 22px;
+    border-radius: 20px;
+    transition: 1.2ms ease-out;
+    font-weight: 500;
+    
+}
+
+.title{
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 100px;
+    letter-spacing: 1.48px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.notes{
+    text-align: left;
+    padding-right: 80px;
+   margin-top: 20px;
+   font-size: 20px;
+   letter-spacing: 2px;
+   color: rgba(255, 29, 135, 0.788);
+   font-weight: 600;
+}
+
+.per{
+    background-color:rgba(255, 29, 135, 0.788);
+    transform: scale(0.88);
+    transition: 1.2ms ease-out;
+    color: white;
+    
+}

@@ -1,0 +1,71 @@
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+    <div class="title">Piano Starter Kit</div>
+    <div class="cont">
+        <!-- <div>Notes</div> -->
+        <div class="sharps">
+            <div  class="notes">#SHARPS</div>
+            <div class="val "data-key="w"> C# </div>
+            <div class="val" data-key="e"> D# </div>
+            <div class="val" data-key="t"> F# </div>
+            <div class="val" data-key="y"> G# </div>
+            <div class="val" data-key="u"> A# </div>
+        </div>
+        <div class="keys">
+            <div  class="notes">KEYS</div>
+            <div class="val" data-key="a"> C </div>
+            <div class="val" data-key="s"> D </div>
+            <div class="val" data-key="d"> E </div>
+            <div class="val" data-key="f""> F </div>
+            <div class="val" data-key="g"> G </div>
+            <div class="val" data-key="h"> A </div>
+            <div class="val" data-key="j"> B </div>
+        </div>
+    </div>
+
+
+
+
+
+    <audio data-key="a" src="notes/C.wav"></audio>
+    <audio data-key="w" src="notes/Cs.wav"></audio>
+    <audio data-key="s" src="notes/D.wav"></audio>
+    <audio data-key="e" src="notes/Eb.wav"></audio>
+    <audio data-key="d" src="notes/E.wav"></audio>
+    <audio data-key="f" src="notes/F.wav"></audio>
+    <audio data-key="t" src="notes/Fs.wav"></audio>
+    <audio data-key="g" src="notes/G.wav"></audio>
+    <audio data-key="y" src="notes/Gs.wav"></audio>
+    <audio data-key="h" src="notes/A.wav"></audio>
+    <audio data-key="u" src="notes/Bb.wav"></audio>
+    <audio data-key="j" src="notes/B.wav"></audio>
+
+</body>
+
+
+<script>
+
+window.addEventListener('keydown', function (e){
+var val = e.key.toLowerCase();
+var ele = document.querySelector(`div[data-key=${val}]`);
+const audio = document.querySelector(`audio[data-key=${val}]`);
+console.log(ele);
+
+if(audio) {
+    audio.currentTime = 0;
+     audio.play();
+     ele.classList.add("per");
+    }
+else return null;
+
+
+});
+
+</script>
+
+</html>
